@@ -23,9 +23,8 @@ class _splashViewState extends State<splashView> {
     super.initState();
     Future.delayed(const Duration(seconds:2),(){pushreplacement(context, const menu());});}
     
-    
-      // ignore: annotate_overrides
-      Widget build(BuildContext context) {
+      @override
+        Widget build(BuildContext context) {
    
  return Scaffold(
       backgroundColor: Colors.white,
@@ -40,19 +39,21 @@ class _splashViewState extends State<splashView> {
                   width: double.infinity,
                   height: 80,
                    // ignore: sort_child_properties_last
-                   child:  Column( mainAxisAlignment: MainAxisAlignment.start,
+                   child:  Column( crossAxisAlignment: CrossAxisAlignment.start, 
                     children:  [ 
                       Text(
                         'Yummy Yummy', style: gettitlestyle(),
 
                         //GoogleFonts.sevillana
                       ),
-                      Text(
-                        'I was SAD, then I see FOOD ',
-                        style: gettitlestyle(
-                          fontsize: 18,
-                          fontWeight: FontWeight.w500,
-                          fontStyle: FontStyle.italic,
+                      Center(
+                        child: Text(
+                          'I was SAD, then I see FOOD ',
+                          style: gettitlestyle(
+                            fontsize: 18,
+                            fontWeight: FontWeight.w500,
+                            fontStyle: FontStyle.italic,
+                          ),
                         ),
                       )
                     ],

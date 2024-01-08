@@ -14,13 +14,13 @@ class _menuState extends State<menu> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: [ const
-          Icon(Icons.account_circle),
-         const Spacer(
+        actions: [
+          const Icon(Icons.account_circle),
+          const Spacer(
             flex: 1,
           ),
-         const Icon(Icons.add_business_outlined),
-         const Spacer(
+          const Icon(Icons.add_business_outlined),
+          const Spacer(
             flex: 2,
           ),
           Text(
@@ -32,12 +32,14 @@ class _menuState extends State<menu> {
           const Spacer(
             flex: 2,
           ),
-        const  Icon(Icons.add_location_alt_outlined),
-         const Spacer(
+          const Icon(Icons.add_location_alt_outlined),
+          const Spacer(
             flex: 1,
           ),
-         const Icon(Icons.add_shopping_cart),
-          //Spacer(flex: 5,),
+          const Icon(Icons.add_shopping_cart),
+          const Spacer(
+            flex: 5,
+          ),
         ],
       ),
       body: Padding(
@@ -50,9 +52,11 @@ class _menuState extends State<menu> {
                 Expanded(
                     child: Container(
                   decoration: BoxDecoration(
-                      color: appcolor.mainC,
-                      borderRadius: BorderRadius.circular(20),
-                      image:const DecorationImage(image: AssetImage('assets/B1.jpg'), fit: BoxFit.cover)),
+                    image: const DecorationImage(
+                        image: AssetImage("assets/B1.png"), fit: BoxFit.fill),
+                    color: appcolor.mainC,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
                 )),
                 const SizedBox(
                   width: 10,
@@ -64,10 +68,19 @@ class _menuState extends State<menu> {
                             borderRadius: BorderRadius.circular(20))))
               ],
             )),
+            const SizedBox(
+              width: 10,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
             Expanded(
                 child: Container(
               decoration: const BoxDecoration(color: Colors.black),
             )),
+            const SizedBox(
+              width: 10,
+            ),
             Expanded(
                 child: Container(
               decoration: const BoxDecoration(color: Colors.blue),
